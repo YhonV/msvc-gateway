@@ -1,0 +1,30 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: springboot-servicio-producto
+        uri: lb://springboot-servicio-producto
+        predicates:
+          - Path=/api/productos/**
+          - Header= token, \d+
+          - Metohd=GET,POST
+          - Query=color, verde
+          - Cookie=color, azul
+        filters:
+          - StripPrefix=2
+          - name: Ejemplo
+            args: 
+              mensaje: Hola mi mensaje personalizado
+              cookieNombre: usuario
+              cookieValor: YhonVivas
+      - id: springboot-servicio-item
+        uri: lb://springboot-servicio-item
+        predicates:
+          - Path=/api/item/**
+        filters:
+          - StripPrefix=2
+          - AddRequestHeader=token-request, 123456
+          - AddResponseHeader=token-response, 12345678
+          - SetResponseHeader=Content-Type, text/plain
+          - AddRequestParameter=nombre, Yhon
+          

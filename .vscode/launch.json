@@ -1,0 +1,44 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringbootEurekaServerApplication<springboot-eureka-server>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.springboot.app.eureka.SpringbootEurekaServerApplication",
+            "projectName": "springboot-eureka-server",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringbootServicioItemApplication<springboot-servicio-item>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.ms.springboot.app.item.SpringbootServicioItemApplication",
+            "projectName": "springboot-servicio-item",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringbootServicioProductoApplication<springboot-servicio-producto>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.ms.springboot.app.producto.SpringbootServicioProductoApplication",
+            "projectName": "springboot-servicio-producto",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringbootServicioGatewayServerApplication<springboot-servicio-gateway-server>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.springboot.app.gateway.SpringbootServicioGatewayServerApplication",
+            "projectName": "springboot-servicio-gateway-server",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
